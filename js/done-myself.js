@@ -1,5 +1,4 @@
 //Function created by myself to apply a width depending on its value to the progress bar in skills
-
 (function ($) {
     "use strict";
 

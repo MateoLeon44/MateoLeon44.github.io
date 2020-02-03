@@ -1,7 +1,11 @@
+//Jquery
 (function ($) {
+    //Strict mode
     "use strict";
     // Global variables
     let html_body = $("html, body");
+
+    //Jquery plugin for the fiter in the portfolio section
     // init Isotope
     let grid_isotope = $(".isotope").each(function () {
         $(this).isotope({
@@ -30,15 +34,14 @@
 
 
     let header_fix = $(".header-fixed");
-
-
     // Navbar
     // Navbar vertial and Navbar mobile
     let sliderbar = $(".header-slidebar");
 
 
 
-    // Bind to scroll
+    /* Binds active item scrolling depending on the section you are on
+    */
     $(window).on("load", function () {
         let topMenu = $(".header-one-page"),
             menuItems = topMenu.find(".nav-link[href^='#']"),
@@ -74,7 +77,9 @@
 
 
 
-    // Back To Top
+    /*
+    Function for going back to the about me section
+    */
     let offset = 450;
     let duration = 500;
     let upToTop = $("#up-to-top");
@@ -96,7 +101,9 @@
     });
 
 
-    // Config Animsition
+    /*
+    Jquery plugin for the animation when you enter the page, if its slow, then you are going to see a loading component
+    */
     $(".animsition").animsition({
         inClass: "fade-in",
         outClass: "fade-out",
